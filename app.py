@@ -7,19 +7,16 @@ st.markdown("""
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 
-        body {
-            font-family: 'Orbitron', sans-serif !important;
-            background-color: #0a0a0a;
-            color: #ffffff;
-            margin: 0;
-            padding: 0;
-            text-align: center;
+        html, body, [data-testid="stAppViewContainer"], [data-testid="stHeader"], [data-testid="stToolbar"] {
+            background-color: #0a0a0a !important; /* إجبار الخلفية الداكنة */
+            color: #ffffff !important; /* إجبار النص ليكون أبيض */
+            text-align: center !important;
         }
 
         h1 {
             font-size: 2.5rem;
             font-weight: 700;
-            color: #00ff88;
+            color: #ffffff;
             margin-bottom: 10px;
         }
 
@@ -36,27 +33,25 @@ st.markdown("""
         }
 
         .stButton>button {
-            background: rgba(255, 255, 255, 0.1);
-            border: 2px solid rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(10px);
-            padding: 12px 40px;
-            border-radius: 12px;
-            color: #ffffff;
-            font-weight: 700;
-            font-size: 1.2rem;
-            cursor: pointer;
-            transition: all 0.3s ease-in-out;
-            width: auto;
-            margin: 10px auto;
-            display: block;
-            text-align: center;
-            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.1) !important;
+            border: 2px solid rgba(255, 255, 255, 0.2) !important;
+            color: #ffffff !important;
+            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2) !important;
+            text-align: center !important;
+            display: block !important;
+            margin: 10px auto !important;
         }
 
         .stButton>button:hover {
-            background: rgba(255, 255, 255, 0.3);
+            background: rgba(255, 255, 255, 0.3) !important;
             transform: scale(1.05);
-            box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+            box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3) !important;
+        }
+
+        input, textarea, select {
+            background-color: #333333 !important;
+            color: #ffffff !important;
+            border: 1px solid #ffffff !important;
         }
     </style>
 """, unsafe_allow_html=True)
